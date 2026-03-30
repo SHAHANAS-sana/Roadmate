@@ -1,0 +1,75 @@
+{% extends 'Fuel station/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/myapp/Fuelstation_add_staff_post/" enctype="multipart/form-data">
+{% csrf_token %}
+<table class="table table-bordered" style="color: white;">
+  <tr>
+    <th scope="col">NAME</th>
+    <th scope="col">
+      <input type="text" class="form-control" required name="textfield11" id="textfield11" />
+    </th>
+  </tr>
+  <tr>
+    <td>PHOTO</td>
+    <td>
+      <input type="file" name="fileField" id="fileField" />
+    </td>
+  </tr>
+  <tr>
+    <td>EMAIL</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield10" id="textfield10" />
+    </td>
+  </tr>
+  <tr>
+    <td>PHONE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield9" id="textfield9" />
+    </td>
+  </tr>
+  <tr>
+    <td>PLACE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield8" id="textfield8" />
+    </td>
+  </tr>
+  <tr>
+    <td>LATTITUDE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield7" id="textfield7" />
+    </td>
+  </tr>
+  <tr>
+    <td>LONGTITUDE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield3" id="textfield3" />
+    </td>
+  </tr>
+  <tr>
+    <td>STATE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield6" id="textfield6" />
+    </td>
+  </tr>
+  <tr>
+    <td>CITY</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield5" id="textfield5" />
+    </td>
+  </tr>
+  <tr>
+    <td>PIN</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield4" id="textfield4" />
+    </td>
+  </tr>
+ 
+  <tr>
+
+    <td colspan="2">
+      <center><input type="submit" name="button" id="button" value="ADD" class="btn btn-success" /></center>
+    </td>
+  </tr>
+</table>
+    </form>
+{% endblock %}

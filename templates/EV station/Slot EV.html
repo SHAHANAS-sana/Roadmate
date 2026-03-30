@@ -1,0 +1,22 @@
+
+{% extends 'EV station/homeindex.html' %}
+{% block body %}
+<form name="form1" method="post" action="/myapp/EVstation_add_slot_post/">
+    {% csrf_token %}
+  <table class="table table-bordered">
+    <tr>
+      <th scope="col">SLOTE NO</th>
+      <th scope="col"><input type="text" class="form-control" required name="textfield" id="textfield"></th>
+    </tr>
+{#         <tr>#}
+{#      <th scope="col">AMOUNT</th>#}
+{#      <th scope="col"><input type="text" class="form-control" required name="textfield" id="textfield"></th>#}
+{#    </tr>#}
+    <tr>
+      <td colspan="2"><div align="center">
+        <input type="submit" name="ALLOCATE" id="ALLOCATE" value="ADD" class="btn btn-success" />
+      </div></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

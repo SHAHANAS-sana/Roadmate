@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% extends 'Fuel station/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/myapp/Fuelstation_edit_staff_post/">
+{% csrf_token %}
+<table class="table table-bordered">
+  <tr>
+    <th scope="col">NAME</th>
+    <th scope="col">
+      <input type="text" class="form-control" required name="textfield11" value="{{ data.name }}" id="textfield11" />
+    </th>
+  </tr>
+  <tr>
+    <td>PHOTO</td>
+    <td>
+      <input type="file" name="fileField" value="{{ data.photo }}" id="fileField" />
+    </td>
+  </tr>
+  <tr>
+    <td>EMAIL</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield10" value="{{ data.email }}" id="textfield10" />
+    </td>
+  </tr>
+  <tr>
+    <td>PHONE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield9" value="{{ data.phone }}" id="textfield9" />
+    </td>
+  </tr>
+  <tr>
+    <td>PLACE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield8" value="{{ data.place }}" id="textfield8" />
+    </td>
+  </tr>
+  <tr>
+    <td>LATTITUDE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield7" value="{{ data.lattitude }}" id="textfield7" />
+    </td>
+  </tr>
+  <tr>
+    <td>LONGTITUDE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield3" value="{{ data.longtitude }}" id="textfield3" />
+    </td>
+  </tr>
+  <tr>
+    <td>STATE</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield6" value="{{ data.state }}" id="textfield6" />
+    </td>
+  </tr>
+  <tr>
+    <td>CITY</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield5" value="{{ data.city }}" id="textfield5" />
+    </td>
+  </tr>
+  <tr>
+    <td>PIN</td>
+    <td>
+      <input type="text" class="form-control" required name="textfield4" value="{{ data.pin }}" id="textfield4" />
+    </td>
+  </tr>
+ 
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input type="submit" name="button" id="button" value="UPDATE" class="btn btn-success" />
+    </td>
+  </tr>
+</table>
+</form>
+{% endblock %}

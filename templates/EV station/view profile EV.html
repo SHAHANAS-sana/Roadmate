@@ -1,0 +1,35 @@
+{% extends 'EV station/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/myapp/EVstation_view_profile_EV/">
+    {% csrf_token %}
+  <table class="table table-bordered">
+      <tr>
+          <td>photo</td>
+          <td><img src="{{ i.photo }}"height="150px" width="150pc"> </td>
+      </tr>
+    <tr>
+      <td>NAME</td>
+      <td>{{ i.name }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>EMAIL</td>
+      <td>&nbsp;{{ i.email }}</td>
+    </tr>
+    <tr>
+      <td>PHONE</td>
+      <td>&nbsp;{{ i.phone }}</td>
+    </tr>
+    <tr>
+      <td>ADDRESS</td>
+      <td>&nbsp;{{ i.place }}<br>{{ i.state }}<br>{{ i.city }}<br>{{ i.pin }}</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+         <center> <a href="/myapp/EVstation_edit_EV/" class="btn btn-success">Edit</a></center>
+      </td>
+
+
+    </tr>
+  </table>
+</form>
+{% endblock %}

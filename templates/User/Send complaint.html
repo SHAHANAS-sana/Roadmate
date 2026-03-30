@@ -1,0 +1,18 @@
+
+{% extends 'Admin/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/myapp/User_view_complaint_usr/">
+    {% csrf_token %}
+  <table class="table table-bordered">
+    <tr>
+        <input type="text" class="form-control" required value="{{ data.id }}">
+      <th scope="col">COMPLAINT</th>
+      <th scope="col"><textarea name="textarea" id="textarea" cols="45" rows="5"></textarea></th>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="SEND" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

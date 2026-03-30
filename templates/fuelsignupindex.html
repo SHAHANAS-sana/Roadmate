@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form in HTML CSS</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="/static/signup/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Fuel Signup</header>
+      <form action="/myapp/Fuelstation_signupfuel_post/" class="form" method="post" enctype="multipart/form-data" >
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" name="textfield" required />
+        </div>
+
+             <div class="input-box">
+          <label>Photo</label>
+          <input type="file" placeholder="choose photo"  name="textfield2" required />
+        </div>
+
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter email address"  name="textfield3" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" name="textfield4" required />
+          </div>
+{#          <div class="input-box">#}
+{#            <label>Birth Date</label>#}
+{#            <input type="date" placeholder="Enter birth date" required />#}
+{#          </div>#}
+        </div>
+{#        <div class="gender-box">#}
+{#          <h3>Gender</h3>#}
+{#          <div class="gender-option">#}
+{#            <div class="gender">#}
+{#              <input type="radio" id="check-male" name="gender" checked />#}
+{#              <label for="check-male">male</label>#}
+{#            </div>#}
+{#            <div class="gender">#}
+{#              <input type="radio" id="check-female" name="gender" />#}
+{#              <label for="check-female">Female</label>#}
+{#            </div>#}
+{#            <div class="gender">#}
+{#              <input type="radio" id="check-other" name="gender" />#}
+{#              <label for="check-other">prefer not to say</label>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" placeholder="Enter Place" name="textfield5" required />
+          <input type="text" placeholder="Enter City" name="textfield9" required />
+          <input type="text" placeholder="Enter Pincode"  name="textfield10" required />
+          <input type="text" placeholder="Enter State"  name="textfield8" required />
+          <input type="text" placeholder="Enter Latitude"   name="textfield7" required />
+          <input type="text" placeholder="Enter Longitude"  name="textfield6" required />
+        </div>
+
+                  <div class="column">
+          <div class="input-box">
+            <label>Password</label>
+            <input type="number" placeholder="Enter password" name="textfield13"  required />
+          </div>
+{#          <div class="input-box">#}
+{#            <label>Birth Date</label>#}
+{#            <input type="date" placeholder="Enter birth date" required />#}
+{#          </div>#}
+        </div>
+
+                            <div class="column">
+          <div class="input-box">
+            <label>Confirm Password</label>
+            <input type="number" placeholder="Confirm password" name="textfield14"  required />
+          </div>
+{#          <div class="input-box">#}
+{#            <label>Birth Date</label>#}
+{#            <input type="date" placeholder="Enter birth date" required />#}
+{#          </div>#}
+        </div>
+
+
+        <button>Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

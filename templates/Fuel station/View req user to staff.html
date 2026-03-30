@@ -1,0 +1,29 @@
+{% extends 'Fuel station/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/myapp/Fuelstation_view_request_to_staff/">
+{% csrf_token %}
+
+  <table class="table table-bordered">
+    <tr>
+      <th scope="col">SL.NO</th>
+      <th scope="col">DATE</th>
+      <th scope="col">USER NAME</th>
+      <th scope="col">ADDRESS</th>
+      <th scope="col">CONTACT</th>
+      <th scope="col">FUEL</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+     {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ forloop.counter }}&nbsp;</td>
+      <td>{{ i.date }}&nbsp;&nbsp;</td>
+      <td>{{ i.USER.name }}&nbsp;</td>
+      <td>{{ i.USER.place }}<br>{{ i.USER.state }}<br>{{ i.USER.city }}<br>{{ i.USER.pin }}</td>
+      <td>{{ i.USER.phone }}&nbsp;</td>
+      <td>{{ i.STOCK.fuel  }}&nbsp;</td>
+      <td><a href="/myapp/Fuelstation_allocation/{{ i.id }}" class="btn btn-success">Allocate</a></td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+{% endblock %}

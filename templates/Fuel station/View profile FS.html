@@ -1,0 +1,38 @@
+{% extends 'Fuel station/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/myapp/Fuelstation_view_profile/">
+{% csrf_token %}
+  <table  class="table table-bordered">
+{#    <tr>#}
+{#      <th scope="col">&nbsp;</th>#}
+{#      <th scope="col">&nbsp;</th>#}
+{#    </tr>#}
+{#       {% for i in data %}#}
+{#    <tr>#}
+{#         <tr>#}
+          <td>photo</td>
+          <td><img src="{{ i.photo }}"height="200px" width="150pc"> </td>
+      </tr>
+      <td>NAME</td>
+      <td>{{ i.name }}&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>EMAIL</td>
+      <td>&nbsp;{{ i.email }}</td>
+    </tr>
+    <tr>
+      <td>PHONE</td>
+      <td>{{ i.phone }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td>ADDRESS</td>
+      <td>{{ i.place }}<br>{{ i.state }}<br>{{ i.city }}<br>{{ i.pin }}&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2"><center><a href="/myapp/Fuelstation_edit_profile/" class="btn btn-success">Edit</a></center></td>
+    </tr>
+{#      {% endfor %}#}
+  </table>
+</form>
+{% endblock %}

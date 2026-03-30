@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% extends 'Fuel station/homeindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/myapp/Fuelstation_edit_stock_post/">
+    {% csrf_token %}
+  <table class="table table-bordered">
+    <tr>
+      <th scope="col">FUEL</th>
+      <th scope="col">
+
+          <input type="text" class="form-control" required name="textfield" value="{{ data.fuel }}" id="textfield" />
+          <input type="hidden" name="id" value="{{ data.id }}" id="textfield" />
+
+
+      </th>
+    </tr>
+    <tr>
+      <td>STOCK</td>
+      <td><input type="text" class="form-control" required name="textfield2" value="{{ data.stock }}" id="textfield2" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="UPDATE" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}
